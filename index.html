@@ -21,17 +21,39 @@
       theme: {
         extend: {
           colors: {
-            ink: '#0B1020',
-            paper: '#F6F7FB',
-            violetx: '#7457FF',
-            bluex: '#2F6BFF',
-            cyanx: '#29C7D8',
-            mintx: '#49D3A3'
+            ink: '#171638',
+            paper: '#F9F9FD',
+            violetx: '#8A57FE',
+            indigox: '#7D7FF7',
+            bluex: '#72ACEF',
+            cyanx: '#60DAE6',
+            mintx: '#FFC400',
+            violet: {
+              50: '#F7F3FF', 100: '#EEE6FF', 200: '#DECEFF',
+              600: '#8A57FE', 700: '#7042E8', 800: '#5930C5',
+              900: '#40218F', 950: '#251052'
+            },
+            blue: {
+              50: '#F0F6FF', 100: '#DFECFF', 200: '#C5DCFF',
+              600: '#5798EE', 700: '#3979D8', 800: '#2C5FAF',
+              900: '#21477F', 950: '#132B55'
+            },
+            cyan: {
+              50: '#EEFCFD', 100: '#D8F8FA', 200: '#B8F0F4',
+              600: '#42C9D5', 700: '#24A9B7', 800: '#1B8794',
+              900: '#166B76', 950: '#0D424A'
+            },
+            indigo: {
+              50: '#F2F2FF', 100: '#E5E5FF', 900: '#29296B', 950: '#191942'
+            },
+            sky: {
+              50: '#EFFBFE', 100: '#D9F5FB', 700: '#278CA9', 900: '#18566B'
+            }
           },
           boxShadow: {
-            soft: '0 18px 60px -32px rgba(11,16,32,.28)',
-            lift: '0 24px 80px -36px rgba(33,24,79,.40)',
-            glow: '0 20px 70px -28px rgba(116,87,255,.62)'
+            soft: '0 18px 60px -32px rgba(23,22,56,.24)',
+            lift: '0 24px 80px -36px rgba(85,69,180,.34)',
+            glow: '0 20px 70px -28px rgba(138,87,254,.58)'
           }
         }
       }
@@ -43,51 +65,75 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <style>
     :root {
-      --ink: #0B1020;
-      --violet: #7457FF;
-      --blue: #2F6BFF;
-      --cyan: #29C7D8;
-      --mint: #49D3A3;
-      --line: #DFE3EE;
+      --ink: #171638;
+      --violet: #8A57FE;
+      --blue: #72ACEF;
+      --cyan: #60DAE6;
+      --mint: #FFC400;
+      --line: #E5E5F2;
     }
 
     * { box-sizing: border-box; }
-    html { background: #F6F7FB; }
+    html { background: #F9F9FD; }
     body {
       margin: 0;
       font-family: 'Inter', system-ui, sans-serif;
-      color: #20273A;
+      color: #252544;
       background:
-        radial-gradient(circle at 8% 22%, rgba(116,87,255,.08), transparent 23rem),
-        radial-gradient(circle at 92% 57%, rgba(41,199,216,.08), transparent 25rem),
-        #F6F7FB;
+        radial-gradient(circle at 8% 22%, rgba(138,87,254,.10), transparent 23rem),
+        radial-gradient(circle at 92% 57%, rgba(96,218,230,.10), transparent 25rem),
+        #F9F9FD;
     }
     h1, h2, h3, h4, .display { font-family: 'Space Grotesk', system-ui, sans-serif; }
-    ::selection { background: rgba(116,87,255,.22); color: #0B1020; }
+    ::selection { background: rgba(138,87,254,.23); color: #171638; }
 
     :focus-visible {
-      outline: 3px solid rgba(41,199,216,.72);
+      outline: 3px solid rgba(96,218,230,.78);
       outline-offset: 4px;
       border-radius: .75rem;
     }
 
     .skip-link {
       position: fixed; z-index: 100; left: 1rem; top: 1rem;
-      transform: translateY(-180%); background: white; color: #0B1020;
+      transform: translateY(-180%); background: white; color: #171638;
       padding: .8rem 1rem; border-radius: .9rem; font-weight: 800;
       box-shadow: 0 16px 40px rgba(0,0,0,.22); transition: transform .2s ease;
     }
     .skip-link:focus { transform: translateY(0); }
 
     .text-gradient {
-      background: linear-gradient(120deg, #AFA0FF 0%, #67A5FF 48%, #55E0D7 100%);
+      background: linear-gradient(120deg, #B39CFF 0%, #8A7CF5 32%, #72ACEF 66%, #60DAE6 100%);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .bg-brand { background: linear-gradient(135deg, var(--violet), var(--blue) 55%, var(--cyan)); }
+    .bg-brand { background: linear-gradient(135deg, var(--violet), #7D7FF7 48%, var(--blue) 72%, var(--cyan)); }
+
+
+    .oreegami-hero {
+      background:
+        radial-gradient(circle at 16% 18%, rgba(138,87,254,.28), transparent 30rem),
+        radial-gradient(circle at 84% 74%, rgba(96,218,230,.22), transparent 32rem),
+        linear-gradient(135deg, #171638 0%, #29265F 52%, #173C5D 100%);
+    }
+    .oreegami-header {
+      background: linear-gradient(90deg, rgba(23,22,56,.94), rgba(41,38,95,.92) 55%, rgba(23,60,93,.92));
+    }
+    .oreegami-accent {
+      position: relative;
+    }
+    .oreegami-accent::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -.45rem;
+      width: 4.5rem;
+      height: .22rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #8A57FE, #72ACEF, #60DAE6, #FFC400);
+    }
 
     .hero-grid {
       background:
-        radial-gradient(circle at 18% 22%, rgba(116,87,255,.22), transparent 28rem),
+        radial-gradient(circle at 18% 22%, rgba(138,87,254,.23), transparent 28rem),
         radial-gradient(circle at 82% 70%, rgba(41,199,216,.16), transparent 30rem);
       opacity: .78;
     }
@@ -98,16 +144,16 @@
       backdrop-filter: blur(16px);
     }
     .surface {
-      background: rgba(255,255,255,.90);
-      border: 1px solid rgba(215,220,232,.94);
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(222,222,240,.96);
       box-shadow: 0 18px 60px -34px rgba(11,16,32,.30);
       backdrop-filter: blur(12px);
     }
     .surface-hover { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
     .surface-hover:hover {
       transform: translateY(-4px);
-      border-color: rgba(116,87,255,.32);
-      box-shadow: 0 28px 80px -36px rgba(72,55,162,.42);
+      border-color: rgba(138,87,254,.34);
+      box-shadow: 0 28px 80px -36px rgba(94,73,190,.36);
     }
 
     .btn-primary, .btn-light, .btn-ghost {
@@ -115,36 +161,36 @@
       min-height: 3rem; padding: .8rem 1.15rem; border-radius: .95rem;
       font-weight: 800; font-size: .875rem; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
     }
-    .btn-primary { color: white; background: linear-gradient(135deg, var(--violet), var(--blue)); box-shadow: 0 16px 32px -18px rgba(116,87,255,.9); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -18px rgba(116,87,255,.9); }
+    .btn-primary { color: white; background: linear-gradient(135deg, var(--violet), var(--blue)); box-shadow: 0 16px 32px -18px rgba(138,87,254,.88); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -18px rgba(138,87,254,.88); }
     .btn-light { color: #111827; background: white; border: 1px solid rgba(255,255,255,.58); }
     .btn-light:hover { transform: translateY(-2px); background: #F4F6FF; }
     .btn-ghost { color: #344054; background: rgba(255,255,255,.74); border: 1px solid #D8DDEA; }
-    .btn-ghost:hover { transform: translateY(-2px); border-color: rgba(116,87,255,.45); color: #6044DE; }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: rgba(138,87,254,.48); color: #7042E8; }
 
-    .section-kicker { letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; font-weight: 800; color: #6548E5; }
-    .section-number { font-family: 'Space Grotesk'; font-size: clamp(4.2rem, 8vw, 7rem); line-height: .8; font-weight: 700; color: rgba(116,87,255,.10); }
+    .section-kicker { letter-spacing: .18em; text-transform: uppercase; font-size: .72rem; font-weight: 800; color: #7042E8; }
+    .section-number { font-family: 'Space Grotesk'; font-size: clamp(4.2rem, 8vw, 7rem); line-height: .8; font-weight: 700; color: rgba(138,87,254,.11); }
 
     .timeline { position: relative; }
     .timeline::before {
       content: ''; position: absolute; left: 15px; top: 1rem; bottom: 1rem; width: 2px;
-      background: linear-gradient(to bottom, #7457FF, #2F6BFF, #29C7D8);
+      background: linear-gradient(to bottom, #8A57FE, #7D7FF7, #72ACEF, #60DAE6);
     }
     .timeline-item { position: relative; padding-left: 3.3rem; }
     .timeline-dot {
       position: absolute; left: 4px; top: 1.35rem; width: 24px; height: 24px; border-radius: 999px;
-      background: white; border: 6px solid #7457FF; box-shadow: 0 0 0 5px #F6F7FB;
+      background: white; border: 6px solid #8A57FE; box-shadow: 0 0 0 5px #F9F9FD;
     }
-    .timeline-item:nth-child(2) .timeline-dot { border-color: #2F6BFF; }
-    .timeline-item:nth-child(3) .timeline-dot { border-color: #29C7D8; }
+    .timeline-item:nth-child(2) .timeline-dot { border-color: #72ACEF; }
+    .timeline-item:nth-child(3) .timeline-dot { border-color: #60DAE6; }
 
-    .quote-mark { font-family: Georgia, serif; font-size: 5rem; line-height: .65; color: rgba(175,160,255,.58); }
+    .quote-mark { font-family: Georgia, serif; font-size: 5rem; line-height: .65; color: rgba(179,156,255,.62); }
 
     dialog {
       width: min(960px, calc(100% - 2rem)); max-height: 90vh; padding: 0; border: 0;
-      border-radius: 1.6rem; box-shadow: 0 40px 110px -35px rgba(11,16,32,.74);
+      border-radius: 1.6rem; box-shadow: 0 40px 110px -35px rgba(23,22,56,.72);
     }
-    dialog::backdrop { background: rgba(7,10,20,.76); backdrop-filter: blur(8px); }
+    dialog::backdrop { background: rgba(15,14,42,.78); backdrop-filter: blur(8px); }
 
     .js .reveal { opacity: 0; transform: translateY(18px); }
     .js .reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity .6s ease, transform .6s ease; }
@@ -174,11 +220,11 @@
 </head>
 <body class="antialiased">
 <a class="skip-link" href="#contenu">Aller au contenu principal</a>
-<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+<header class="oreegami-header fixed inset-x-0 top-0 z-50 border-b border-white/10 backdrop-blur-xl">
 <nav aria-label="Navigation principale" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="flex h-[72px] items-center justify-between gap-4">
 <a aria-label="Retour à l’accueil" class="flex items-center gap-3 text-white" href="#accueil">
-<span aria-hidden="true" class="grid h-10 w-10 place-items-center rounded-2xl bg-brand shadow-glow"><i class="fa-solid fa-bridge"></i></span>
+<span aria-hidden="true" class="grid h-10 w-10 place-items-center overflow-hidden rounded-2xl bg-brand shadow-glow"><img alt="" class="h-full w-full object-cover" src="data:image/png;base64,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"/></span>
 <span>
 <strong class="display block text-sm leading-tight">Corinne Marsiac</strong>
 <span class="block text-[10px] font-bold uppercase tracking-[.16em] text-cyan-200">Métier · projet · technologie</span>
@@ -187,6 +233,7 @@
 <div class="hidden items-center gap-6 text-sm font-semibold text-slate-300 lg:flex">
 <a class="hover:text-white" href="#impact">Impact</a>
 <a class="hover:text-white" href="#parcours">Parcours</a>
+<a class="hover:text-white" href="#motivation">Motivation</a>
 <a class="hover:text-white" href="#oreegami">Alternance</a>
 <a class="hover:text-white" href="#competences">Compétences</a>
 <a class="rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white hover:bg-white/15" href="#contact">Me contacter</a>
@@ -199,6 +246,7 @@
 <div class="rounded-2xl border border-white/10 bg-white/10 p-2 backdrop-blur-xl">
 <a class="block rounded-xl px-4 py-3 hover:bg-white/10" href="#impact">Impact</a>
 <a class="block rounded-xl px-4 py-3 hover:bg-white/10" href="#parcours">Parcours</a>
+<a class="block rounded-xl px-4 py-3 hover:bg-white/10" href="#motivation">Motivation</a>
 <a class="block rounded-xl px-4 py-3 hover:bg-white/10" href="#oreegami">Alternance Oreegami</a>
 <a class="block rounded-xl px-4 py-3 hover:bg-white/10" href="#competences">Compétences</a>
 <a class="block rounded-xl px-4 py-3 text-cyan-200 hover:bg-white/10" href="#contact">Contact et documents</a>
@@ -208,7 +256,7 @@
 </header>
 <main id="contenu">
 <!-- HERO -->
-<section class="relative overflow-hidden bg-ink pt-[72px] text-white" id="accueil">
+<section class="oreegami-hero relative overflow-hidden pt-[72px] text-white" id="accueil">
 <div aria-hidden="true" class="hero-grid absolute inset-0 pointer-events-none"></div>
 <div aria-hidden="true" class="absolute -left-32 top-16 h-96 w-96 rounded-full bg-violetx/25 blur-[110px]"></div>
 <div aria-hidden="true" class="absolute -right-28 top-36 h-[30rem] w-[30rem] rounded-full bg-cyanx/20 blur-[130px]"></div>
@@ -216,13 +264,13 @@
 <div class="max-w-5xl">
 <div class="">
 <div class="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2.5 shadow-sm backdrop-blur-xl">
-<span aria-hidden="true" class="h-2.5 w-2.5 shrink-0 rounded-full bg-mintx shadow-[0_0_0_5px_rgba(73,211,163,.12)]"></span>
+<span aria-hidden="true" class="h-2.5 w-2.5 shrink-0 rounded-full bg-mintx shadow-[0_0_0_5px_rgba(255,196,0,.18)]"></span>
 <span class="text-xs font-extrabold text-white sm:text-sm">Recherche d’alternance • Île-de-France / hybride ou 100% télétravail</span>
 </div>
 <p class="mt-8 text-xs font-extrabold uppercase tracking-[.23em] text-cyan-200">Gestion de projet · Expérience client · Transformation digitale</p>
 <h1 class="mt-4 text-[2.65rem] font-bold leading-[1.04] tracking-[-.045em] text-white sm:text-6xl lg:text-[4.7rem]">
               Cheffe de projet digital,<br/>
-<span class="text-gradient">IA générative &amp; no-code</span>
+<span class="oreegami-accent text-gradient">IA générative &amp; no-code</span>
 </h1>
 <p class="mt-5 max-w-3xl font-semibold leading-relaxed text-slate-300 sm:text-lg">
               (alternance de 12 mois à compter de Janvier 2027)
@@ -232,7 +280,7 @@
             </p>
 <div class="mt-8 flex flex-wrap gap-3">
 <a class="btn-primary" href="#impact"><i aria-hidden="true" class="fa-solid fa-arrow-down"></i> Découvrir mon profil</a>
-<a class="btn-light" href="documents/Corinne_Marsiac_Dossier_Candidature_Oreegami.pdf" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fa-solid fa-folder-open text-violet-700"></i> Dossier de candidature</a>
+<a class="btn-light" href="https://drive.google.com/file/d/1OF9UW3oBhUOOG-bTOb1tqe43-wq2BRJt/view?usp=sharing" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fa-solid fa-folder-open text-violet-700"></i> Dossier de candidature</a>
 </div>
 </div>
 
@@ -254,7 +302,7 @@
 <div class="grid items-end gap-8 lg:grid-cols-12">
 <div class="lg:col-span-8">
 <span class="section-kicker">01 · Ce que j’apporte</span>
-<h2 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-[-.035em] text-ink sm:text-5xl">Une expertise métier enrichie par l’IA et le no-code.</h2>
+<h2 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-[-.035em] text-ink sm:text-5xl">Une expertise métier déjà solide, enrichie par l’IA et le no-code.</h2>
 </div>
 <div class="hidden justify-end lg:col-span-4 lg:flex"><span aria-hidden="true" class="section-number">01</span></div>
 </div>
@@ -389,6 +437,41 @@
 </div>
 </div>
 </section>
+
+<!-- MOTIVATION -->
+<section class="relative overflow-hidden bg-gradient-to-br from-violet-50 via-white to-cyan-50" id="motivation">
+<div aria-hidden="true" class="absolute -left-24 top-8 h-72 w-72 rounded-full bg-violetx/10 blur-[90px]"></div>
+<div aria-hidden="true" class="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-cyanx/10 blur-[90px]"></div>
+<div class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24 reveal">
+<div class="grid gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-10">
+<div class="lg:col-span-5">
+<div class="h-full rounded-[2rem] bg-ink p-7 text-white shadow-2xl sm:p-9">
+<span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-cyan-200"><i class="fa-solid fa-compass"></i> 03 · Motivation</span>
+<h2 class="mt-6 text-4xl font-bold leading-tight tracking-[-.035em] sm:text-5xl">Développer une dimension plus technique, sans perdre le sens du besoin.</h2>
+<p class="mt-6 text-base leading-relaxed text-slate-300">Une évolution cohérente vers un rôle de passerelle entre expertise métier, utilisateurs et solutions numériques.</p>
+<div class="mt-8 grid grid-cols-3 gap-3">
+<div class="glass rounded-2xl p-4 text-center"><i class="fa-solid fa-wand-magic-sparkles text-cyan-200"></i><strong class="mt-2 block text-sm">Prototyper</strong></div>
+<div class="glass rounded-2xl p-4 text-center"><i class="fa-solid fa-gears text-cyan-200"></i><strong class="mt-2 block text-sm">Automatiser</strong></div>
+<div class="glass rounded-2xl p-4 text-center"><i class="fa-solid fa-rocket text-cyan-200"></i><strong class="mt-2 block text-sm">Déployer</strong></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="surface h-full rounded-[2rem] p-7 sm:p-10">
+<span class="section-kicker">Pourquoi cette évolution ?</span>
+<div class="mt-6 space-y-6 text-base leading-[1.85] text-slate-700 sm:text-lg">
+<p>Mon évolution vers la gestion de projets IA générative et no-code s’inscrit dans la continuité de mon parcours : enrichir mon expertise métier d’une capacité à prototyper, automatiser et déployer des solutions utiles.</p>
+<p>L’alternance Oreegami me permettra d’acquérir cette dimension technique tout en apportant immédiatement mon expérience du cadrage, du delivery fonctionnel, de la pédagogie et de l’accompagnement au changement.</p>
+</div>
+<div class="mt-8 rounded-2xl border border-violet-100 bg-violet-50 p-5">
+<span class="text-xs font-extrabold uppercase tracking-wider text-violet-700">Positionnement recherché</span>
+<p class="mt-2 font-semibold leading-relaxed text-violet-950">Être une passerelle entre les besoins métier, les utilisateurs et les solutions d’IA générative et de no-code.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <!-- OREEGAMI -->
 <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24 reveal" id="oreegami">
 <div class="relative overflow-hidden rounded-[2.3rem] bg-ink px-6 py-8 text-white shadow-2xl sm:px-10 sm:py-12 lg:px-14 lg:py-14">
@@ -449,7 +532,7 @@
 <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24 reveal">
 <div class="grid items-end gap-8 lg:grid-cols-12">
 <div class="lg:col-span-8">
-<span class="section-kicker">03 · Compétences &amp; outils</span>
+<span class="section-kicker">04 · Compétences &amp; outils</span>
 <h2 class="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-[-.035em] text-ink sm:text-5xl">Compétences actuelles &amp; spécialisation IA/no-code.</h2>
 <p class="mt-5 max-w-3xl text-sm leading-relaxed text-slate-600">Une présentation transparente du niveau actuel, des certifications et des compétences prévues pendant le bootcamp.</p>
 </div>
@@ -542,8 +625,8 @@
 <div class="relative mt-10 border-t border-white/10 pt-7">
 <span class="text-[10px] font-extrabold uppercase tracking-[.18em] text-slate-400">Documents</span>
 <div class="mt-4 flex flex-wrap gap-3">
-<a class="btn-light" href="documents/CV_Corinne_Marsiac_Alternance_IA_NoCode.pdf" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-file-pdf text-red-600"></i> CV PDF</a>
-<a class="btn-light" href="documents/Corinne_Marsiac_Dossier_Candidature_Oreegami.pdf" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-folder-open text-blue-700"></i> Dossier de candidature</a>
+<a class="btn-light" href="https://drive.google.com/file/d/17Ebf7kpB09N1MsNdsra-Y2wL4HkbF_Qp/view?usp=sharing" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-file-pdf text-red-600"></i> CV PDF</a>
+<a class="btn-light" href="https://drive.google.com/file/d/1OF9UW3oBhUOOG-bTOb1tqe43-wq2BRJt/view?usp=sharing" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-folder-open text-blue-700"></i> Dossier de candidature</a>
 <a class="btn-light" href="https://drive.google.com/file/d/1-B9Xe4kPQgjPp4tUpm6WXlg-n9tMyJ5s/view?usp=sharing" rel="noopener noreferrer" target="_blank"><i class="fa-solid fa-graduation-cap text-violet-700"></i> Plaquette de formation</a>
 </div>
 </div>
