@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corinne Marsiac - Cheffe de Projet Digital, IA Générative & No-Code</title>
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="CV Interactif de Corinne Marsiac, Cheffe de Projet Digital, IA Générative & No-Code (Formation Oreegami). +10 ans d'expertise SaaS B2B, Customer Care, Salesforce & Automatisations." />
+    <meta name="keywords" content="Cheffe de projet digital, IA générative, No-Code, Oreegami, Customer Success Manager, Customer Care, Salesforce, Make, n8n, Airtable, Supabase, Vibe Coding, Product Builder" />
+    <meta name="author" content="Corinne Marsiac" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Corinne Marsiac - Cheffe de Projet Digital, IA Générative & No-Code" />
+    <meta property="og:description" content="+10 ans d'expérience SaaS B2B & Care, en spécialisation IA Générative & No-Code avec Oreegami. Recherche d'alternance." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4D03AQHYWq2DzXkTfA/profile-displayphoto-crop_800_800/B4DZiwiCFgHYAI-/0/1755308368610?e=1759363200&v=beta&t=IzdqhAFMAL8IXJ4xRq6FP0_LGczUPH9VLuJSyJY3QQU" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            violet: '#7C3AED',
+                            blue: '#2563EB',
+                            cyan: '#06B6D4',
+                            sky: '#38BDF8',
+                            dark: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #2563EB 50%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #7C3AED 0%, #2563EB 50%, #06B6D4 100%);
+        }
+
+        .bg-gradient-light {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(37, 99, 235, 0.05) 50%, rgba(6, 182, 212, 0.05) 100%);
+        }
+
+        .card-care {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-care:hover {
+            transform: translateY(-4px);
+            border-color: #A78BFA;
+            box-shadow: 0 12px 30px -4px rgba(124, 58, 237, 0.12);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px -2px rgba(124, 58, 237, 0.35);
+        }
+
+        .btn-secondary {
+            background: #FFFFFF;
+            border: 1.5px solid #CBD5E1;
+            color: #334155;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #7C3AED;
+            color: #7C3AED;
+            background: #F8FAFC;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        .details-content.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        .details-trigger .chevron {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .details-trigger.open .chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#accueil" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-brand flex items-center justify-center text-white font-bold shadow-md shadow-violet-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fas fa-dove text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-extrabold text-slate-900 block leading-tight">Corinne Marsiac</span>
+                        <span class="text-xs font-semibold text-cyan-600 block">CARE x IA • No-Code</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                    <a href="#qui-suis-je" class="hover:text-violet-600 transition">Qui suis-je ?</a>
+                    <a href="#oreegami" class="hover:text-violet-600 transition flex items-center gap-1.5"><i class="fas fa-graduation-cap text-cyan-500"></i> Oreegami</a>
+                    <a href="#expertise" class="hover:text-violet-600 transition">Expertise</a>
+                    <a href="#parcours" class="hover:text-violet-600 transition">Parcours</a>
+                    <a href="#competences" class="hover:text-violet-600 transition">Compétences</a>
+                    <a href="#contact" class="btn-primary px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold shadow-sm">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 font-semibold text-slate-700">
+            <a href="#qui-suis-je" class="block py-2 hover:text-violet-600">Qui suis-je ?</a>
+            <a href="#oreegami" class="block py-2 text-cyan-600">Formation Oreegami (2026)</a>
+            <a href="#expertise" class="block py-2 hover:text-violet-600">Expertise Care & CS</a>
+            <a href="#parcours" class="block py-2 hover:text-violet-600">Parcours & Formations</a>
+            <a href="#competences" class="block py-2 hover:text-violet-600">Compétences & Stack</a>
+            <a href="#contact" class="block py-2 text-violet-600 font-bold">Contact & Téléchargements</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <section id="accueil" class="py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Column 1: Main Copy -->
+                <div class="lg:col-span-7 mb-10 lg:mb-0 pr-0 lg:pr-4">
+                    <div class="inline-flex items-center gap-2 bg-gradient-light border border-violet-200 px-4 py-1.5 rounded-full mb-6">
+                        <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-pulse"></span>
+                        <span class="text-xs font-bold text-violet-800 uppercase tracking-wide">Recherche d'Alternance (Rythme Adapté)</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
+                        Cheffe de Projet Digital, <br class="hidden sm:inline" />
+                        <span class="text-gradient">IA Générative & No-Code</span>
+                    </h1>
+                </div>
+
+                <!-- Column 2: Interactive Process Graphic "Du besoin au produit adopté" -->
+                <div class="lg:col-span-5 flex justify-center pt-4 lg:pt-0">
+                    <div class="relative group w-full max-w-lg">
+                        <div class="absolute -inset-1 bg-gradient-brand rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                        <button id="open-cycle-modal-button" class="relative w-full bg-white rounded-3xl p-6 border border-slate-200 shadow-xl flex flex-col items-center group-hover:scale-[1.01] transition duration-300 text-left">
+                            <div class="text-center mb-5 w-full">
+                                <span class="inline-block bg-gradient-light border border-violet-200 text-violet-800 text-[11px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-2">
+                                    <i class="fas fa-sitemap mr-1 text-cyan-600"></i> Méthodologie Produit & IA
+                                </span>
+                                <h3 class="text-2xl font-extrabold text-slate-900 leading-tight">Du besoin au produit adopté</h3>
+                                <p class="text-xs font-medium text-slate-500 mt-1">Une démarche orientée utilisateurs, valeur métier et déploiement réel</p>
+                            </div>
+
+                            <!-- 6 Steps Interactive Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full mb-4">
+                                <!-- Step 1 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-blue-500 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">1</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Explorer</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Entretiens, verbatims</span>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-violet-600 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">2</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Cadrer</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Problème, KPIs</span>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">3</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Concevoir</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Parcours, MVP</span>
+                                </div>
+                                <!-- Step 4 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">4</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Construire</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Données, Agents IA</span>
+                                </div>
+                                <!-- Step 5 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-cyan-500 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">5</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Tester</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Cas limites, Recette</span>
+                                </div>
+                                <!-- Step 6 -->
+                                <div class="p-3 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col items-center text-center hover:bg-violet-50/50 transition">
+                                    <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center mb-1.5 shadow-sm">6</div>
+                                    <span class="text-xs font-bold text-slate-900 block">Déployer</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight mt-0.5">Formation, Itérations</span>
+                                </div>
+                            </div>
+
+                            <!-- Deliverables Banner -->
+                            <div class="w-full p-3 bg-cyan-50/80 rounded-xl border border-cyan-200/80 text-[11px] text-slate-700 text-center font-medium">
+                                <span class="font-extrabold text-cyan-900">Livrables possibles :</span> note de cadrage • personas • cartographie • backlog • roadmap • modèle de données • workflow • prototype • plan de tests • documentation • tableau de bord
+                            </div>
+
+                            <span class="text-[11px] text-violet-600 font-bold mt-3 text-center w-full block">
+                                <i class="fas fa-search-plus mr-1"></i> Cliquez pour explorer le détail de chaque étape
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qui-suis-je" class="py-16 fade-in">
+            <div class="card-care p-8 sm:p-12 rounded-3xl">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4 flex justify-center">
+                        <div class="relative">
+                            <div class="w-48 h-48 rounded-3xl bg-gradient-brand p-1 shadow-lg">
+                                <div class="w-full h-full bg-white rounded-[22px] overflow-hidden flex items-center justify-center">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHYWq2DzXkTfA/profile-displayphoto-crop_800_800/B4DZiwiCFgHYAI-/0/1755308368610?e=1759363200&v=beta&t=IzdqhAFMAL8IXJ4xRq6FP0_LGczUPH9VLuJSyJY3QQU" alt="Corinne Marsiac" class="w-full h-full object-cover rounded-[22px]" onerror="this.onerror=null; this.src='https://placehold.co/200x200/7C3AED/FFFFFF?text=Corinne+Marsiac';">
+                                </div>
+                            </div>
+                            <span class="absolute bottom-2 right-2 bg-emerald-500 text-white text-xs font-extrabold px-3 py-1 rounded-full border-2 border-white shadow">
+                                En Recherche
+                            </span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <span class="text-xs font-bold uppercase tracking-wider text-violet-600 mb-1 block">Mon profil en bref</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Qui suis-je ?</h2>
+                        <p class="text-slate-600 leading-relaxed font-medium mb-4 text-sm sm:text-base">
+                            Professionnelle certifiée Customer Success Manager (CCSM Level 1) avec plus de 10 ans d'expérience dans l'écosystème SaaS B2B et de la paie réglementée (ADP, Nibelis). Passionnée par la satisfaction client et l'efficacité opérationnelle, je suis convaincue que : <strong class="text-slate-900">"La technologie est un puissant facilitateur, mais c'est la maîtrise des processus et la valeur humaine qui créent le succès."</strong>
+                        </p>
+                        <p class="text-slate-600 leading-relaxed font-medium text-sm sm:text-base">
+                            Aujourd'hui, j'allie cette double culture métiers & relation client à une spécialisation intensive avec <strong class="text-cyan-600">Oreegami</strong> en pilotage de projets **IA générative & No-Code**. Mon objectif : orchestrer des automatisations intelligentes et concevoir des applications agiles pour décupler la productivité des équipes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oreegami" class="py-16 fade-in">
+            <div class="bg-gradient-to-br from-violet-900 via-indigo-900 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 mb-4 text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                            <i class="fas fa-graduation-cap"></i> Spécialisation 2026 - Oreegami
+                        </div>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold mb-4 text-white leading-tight">
+                            Chef de Projet IA Générative & No-Code
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-medium">
+                            Une formation certifiante intensive (399h de Bootcamp + 12 mois d'alternance) dispensée par Oreegami. Apprendre à concevoir, automatiser et piloter des produits digitaux avec les meilleurs outils sans écrire une ligne de code.
+                        </p>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs">
+                            <div class="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-2xl">
+                                <span class="block font-extrabold text-cyan-300 text-lg">RNCP Niv. 6</span>
+                                <span class="text-slate-300">Product Builder No-Code</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-2xl">
+                                <span class="block font-extrabold text-cyan-300 text-lg">Rythme Souple</span>
+                                <span class="text-slate-300">1j/mois & 1sem/trimestre</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-2xl col-span-2 sm:col-span-1">
+                                <span class="block font-extrabold text-cyan-300 text-lg">399 Heures</span>
+                                <span class="text-slate-300">Cadrage, Agents & Workflows</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md">
+                        <h3 class="text-base font-bold text-cyan-300 mb-3 flex items-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Objectifs pour l'entreprise d'accueil :
+                        </h3>
+                        <ul class="space-y-2.5 text-xs text-slate-200">
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-400 mt-0.5"></i> <span>Auditer et optimiser les processus métiers internes</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-400 mt-0.5"></i> <span>Concevoir et déployer des workflows automatisés (Make, n8n)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-400 mt-0.5"></i> <span>Créer des agents IA personnalisés & bases RAG (Supabase)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-400 mt-0.5"></i> <span>Prototyper des interfaces web dynamiques (WeWeb, Lovable)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sous-section : Exemples de Métiers Visés & Débouchés Observés -->
+            <div class="mt-12 bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-cyan-600 block">Débouchés & Trajectoires</span>
+                        <h3 class="text-2xl font-extrabold text-slate-900 mt-0.5">Exemples de Métiers Visés</h3>
+                    </div>
+                    <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full shrink-0">
+                        <span>⭐ Métiers observés sur les 4 premières promotions Oreegami</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Métier 1 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-violet-50/50 to-white border border-violet-200 hover:border-violet-400 transition relative group">
+                        <span class="absolute top-4 right-4 text-amber-500 font-bold text-base" title="Observé sur les 4 premières promotions Oreegami">⭐</span>
+                        <h4 class="text-base font-bold text-slate-900 mb-2 pr-6">Chef de projet digital IA & no-code</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Pilote des projets de transformation numérique intégrant des technologies IA et no-code. Traduit les besoins métiers en solutions concrètes, coordonne les parties prenantes et garantit la livraison d'un produit fonctionnel.</p>
+                    </div>
+
+                    <!-- Métier 2 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-cyan-50/50 to-white border border-cyan-200 hover:border-cyan-400 transition relative group">
+                        <span class="absolute top-4 right-4 text-amber-500 font-bold text-base" title="Observé sur les 4 premières promotions Oreegami">⭐</span>
+                        <h4 class="text-base font-bold text-slate-900 mb-2 pr-6">Consultant en automatisation & IA</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Expert qui accompagne les entreprises dans l'identification et la mise en œuvre d'opportunités d'automatisation. Audite les processus, conçoit des architectures no-code et déploie des solutions IA.</p>
+                    </div>
+
+                    <!-- Métier 3 -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-50/50 to-white border border-blue-200 hover:border-blue-400 transition relative group">
+                        <span class="absolute top-4 right-4 text-amber-500 font-bold text-base" title="Observé sur les 4 premières promotions Oreegami">⭐</span>
+                        <h4 class="text-base font-bold text-slate-900 mb-2 pr-6">Product Builder / No-code Builder</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Responsable du cycle de vie d'un produit numérique construit sans code. Définit le backlog, priorise les fonctionnalités, rédige les spécifications et délivre l'application en intégrant les retours utilisateurs.</p>
+                    </div>
+
+                    <!-- Métier 4 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-violet-300 transition relative group">
+                        <span class="absolute top-4 right-4 text-amber-500 font-bold text-base" title="Observé sur les 4 premières promotions Oreegami">⭐</span>
+                        <h4 class="text-base font-bold text-slate-900 mb-2 pr-6">Chef de projet automatisation & data</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Conçoit et déploie des pipelines de données automatisés reliant bases de données, outils métiers et agents IA. Garantit la fiabilité des flux d'information et aide à la décision.</p>
+                    </div>
+
+                    <!-- Métier 5 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-violet-300 transition relative group">
+                        <span class="absolute top-4 right-4 text-amber-500 font-bold text-base" title="Observé sur les 4 premières promotions Oreegami">⭐</span>
+                        <h4 class="text-base font-bold text-slate-900 mb-2 pr-6">Chef de projet Digital, UX & CRM</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Conçoit des parcours utilisateurs optimisés, structure l'expérience client en ligne, gère la relation client digitale et aligne les outils CRM sur la stratégie de rétention.</p>
+                    </div>
+
+                    <!-- Métier 6 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-violet-300 transition relative group">
+                        <h4 class="text-base font-bold text-slate-900 mb-2">Responsable de la transformation digitale</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">Pilote la feuille de route numérique d'une organisation. Identifie les leviers de transformation, sélectionne les outils adaptés et conduit le changement grâce aux méthodes agiles et à l'IA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="py-16 fade-in">
+            <h2 class="text-3xl font-extrabold text-center mb-4">Double Expertise <span class="text-gradient">Care & Success</span></h2>
+            <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm">
+                La synergie entre l'écoute active, le support réactif et l'accompagnement proactif pour sécuriser l'adoption et la croissance.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-care p-8 rounded-3xl text-center">
+                    <div class="w-12 h-12 rounded-2xl bg-violet-100 text-violet-600 flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Onboarding & Adoption</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Cadrage des parcours de démarrages, réduction du Time-to-Value (TTV) et accompagnement des utilisateurs métiers vers l'autonomie.
+                    </p>
+                </div>
+
+                <div class="card-care p-8 rounded-3xl text-center">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Rétention & Customer Care</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Analyse des signaux faibles de désengagement, traitement réactif des requêtes complexes, gestion du backlog et réduction du churn.
+                    </p>
+                </div>
+
+                <div class="card-care p-8 rounded-3xl text-center">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Expansion & Pilotage KPIs</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Animation des comités de pilotage (QBR), suivi rigoureux des KPIs (NPS, CSAT, SLA, MRR) et détection d'opportunités d'upsell.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parcours" class="py-16 fade-in">
+            <h2 class="text-3xl font-extrabold text-center mb-12"><span class="text-gradient">Parcours Professionnel</span> & Certifications</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Expériences Professionnelles -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-slate-900 flex items-center gap-2">
+                        <i class="fas fa-briefcase text-violet-600"></i> Expériences Clés (+10 ans SaaS B2B)
+                    </h3>
+
+                    <div class="space-y-6 border-l-2 border-violet-200 pl-6 ml-3">
+                        <!-- Experience 1 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 bg-violet-600 rounded-full border-4 border-white shadow"></div>
+                            <button class="details-trigger w-full text-left">
+                                <span class="text-xs font-bold text-violet-600">02/2022 - 11/2023</span>
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-base font-bold text-slate-900">Payroll Implementation Project Manager</h4>
+                                    <i class="fas fa-chevron-down chevron text-xs text-slate-400"></i>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-600">ADP France (Nanterre)</p>
+                            </button>
+                            <div class="details-content text-xs text-slate-600 mt-3 space-y-2">
+                                <p class="italic">Leader mondial des solutions SaaS RH et Paie.</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Analyse des besoins clients C-Levels (DRH, DAF) et rédaction des spécifications.</li>
+                                    <li>Animation des comités de projet (COPIL, Kick-off, recette, UAT).</li>
+                                    <li>Paramétrage des portails et onboarding des utilisateurs à distance.</li>
+                                    <li><strong>Résultats :</strong> 90% des projets livrés dans les délais, CSAT France 70%.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 bg-violet-600 rounded-full border-4 border-white shadow"></div>
+                            <button class="details-trigger w-full text-left">
+                                <span class="text-xs font-bold text-violet-600">09/2014 - 01/2022</span>
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-base font-bold text-slate-900">Local Payroll Account Manager</h4>
+                                    <i class="fas fa-chevron-down chevron text-xs text-slate-400"></i>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-600">ADP France (Nanterre)</p>
+                            </button>
+                            <div class="details-content text-xs text-slate-600 mt-3 space-y-2">
+                                <p class="italic">Gestion de portefeuille clients SMB & Mid-Market.</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Production mensuelle et suivi de la qualité de service (SLA, FCR).</li>
+                                    <li>Monthly reviews, QBRs, détection proactives des risques de churn.</li>
+                                    <li>Ventes de prestations add-ons et out-of-scope (croissance du MRR).</li>
+                                    <li><strong>Projet phare :</strong> Reconquête d'un compte détracteur et récupération de 100k€ d'indus.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 bg-violet-600 rounded-full border-4 border-white shadow"></div>
+                            <button class="details-trigger w-full text-left">
+                                <span class="text-xs font-bold text-violet-600">09/2013 - 08/2014</span>
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-base font-bold text-slate-900">Gestionnaire Paie & Support Client</h4>
+                                    <i class="fas fa-chevron-down chevron text-xs text-slate-400"></i>
+                                </div>
+                                <p class="text-xs font-semibold text-slate-600">Nibelis (Levallois-Perret)</p>
+                            </button>
+                            <div class="details-content text-xs text-slate-600 mt-3 space-y-2">
+                                <p class="italic">Éditeur français de solutions SaaS RH.</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Support client N1/N2 et accompagnement à l'adoption de la plateforme.</li>
+                                    <li>Vulgarisation des nouveautés réglementaires auprès des clients.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Formations -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-slate-900 flex items-center gap-2">
+                        <i class="fas fa-certificate text-cyan-600"></i> Certifications & Formations
+                    </h3>
+
+                    <div class="space-y-4">
+                        <!-- 2026: Generation France -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2026
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Generation France</h4>
+                                <p class="text-xs text-slate-500">Customer Care : Digital Customer Success 2.0 & Customer Service Management</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025-2026: Salesforce Certified -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2025-26
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Salesforce Certified</h4>
+                                <p class="text-xs text-slate-500">Platform Administrator & Agentforce Specialist</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025: M2i Formation -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2025
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">M2i Formation</h4>
+                                <p class="text-xs text-slate-500">Consultant Fonctionnel Salesforce</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025: Kare School & SuccessHacker -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2025
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Kare School & SuccessHacker</h4>
+                                <p class="text-xs text-slate-500">Bootcamp CSM & Certified Customer Success Manager Level 1 (CCSM)</p>
+                            </div>
+                        </div>
+
+                        <!-- 2025: HubSpot & Intercom -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2025
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">HubSpot & Intercom Certified</h4>
+                                <p class="text-xs text-slate-500">HubSpot Sales/Service Hub • Intercom Support Agent & Manager</p>
+                            </div>
+                        </div>
+
+                        <!-- 2024: Online Sales Success -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2024
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Online Sales Success</h4>
+                                <p class="text-xs text-slate-500">Stratégie Digitale & E-commerce</p>
+                            </div>
+                        </div>
+
+                        <!-- 2022: UNOW -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2022
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">UNOW</h4>
+                                <p class="text-xs text-slate-500">Certificat de Gestion de projet</p>
+                            </div>
+                        </div>
+
+                        <!-- 2013: IFOCOP -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2013
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">IFOCOP</h4>
+                                <p class="text-xs text-slate-500">Gestionnaire de Paie (RNCP Niv. 5) - Mention Très Bien</p>
+                            </div>
+                        </div>
+
+                        <!-- 2010: Université de Reims -->
+                        <div class="card-care p-4 rounded-2xl flex items-start gap-3">
+                            <div class="w-14 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center font-extrabold text-xs shrink-0">
+                                2010
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Université de Reims</h4>
+                                <p class="text-xs text-slate-500">Master 2 Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences" class="py-16 fade-in">
+            <h2 class="text-3xl font-extrabold text-center mb-4"><span class="text-gradient">Compétences</span> & Boîte à Outils</h2>
+            <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm">
+                Une alliance puissante entre <strong class="text-slate-900">+10 ans d'expertise métier SaaS/CARE</strong> et des <strong class="text-cyan-600">compétences de pointe en IA Générative et No-Code</strong> développées avec Oreegami.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+                <!-- Box Langues & Communication -->
+                <div class="lg:col-span-12 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-lg">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-900">Langues de travail</h4>
+                            <p class="text-xs text-slate-500">Missions nationales & environnements multiculturels</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm font-medium text-slate-700">
+                        <div class="flex items-center gap-2">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="Français" class="w-5 h-auto rounded">
+                            <span>Français : Langue maternelle</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="Anglais" class="w-5 h-auto rounded">
+                            <span>Anglais : Professionnel (B2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Double Grid: Actuel vs Oreegami -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- CARTE 1 : Stack & Compétences Actuelles -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-md relative hover:border-violet-300 transition-colors">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                        <div>
+                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-200">
+                                <i class="fas fa-check-circle mr-1"></i> Acquis & Opérationnel (+10 ans)
+                            </span>
+                            <h3 class="text-xl font-extrabold text-slate-900 mt-2">Expertise & Stack Actuelles</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sub Block 1: Compétences Métiers -->
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-briefcase text-violet-600"></i> Compétences Clés Maîtrisées
+                        </h4>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fas fa-angle-right text-emerald-500 mt-1"></i> <span><strong>Gestion de Projet SaaS & RH/Paie</strong> (Mid-Market & SMB)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-angle-right text-emerald-500 mt-1"></i> <span><strong>Customer Success & Care Management</strong> (Onboarding, Adoption, Rétention)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-angle-right text-emerald-500 mt-1"></i> <span><strong>Pilotage des KPIs</strong> (NPS, CSAT, SLA, TTV, MRR)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-angle-right text-emerald-500 mt-1"></i> <span><strong>Prévention du Churn & Reconquête</strong> de comptes détracteurs</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-angle-right text-emerald-500 mt-1"></i> <span><strong>Analyse des Spécifications Métiers</strong> & Relation C-Levels/DRH</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sub Block 2: Stack Outils Actuels -->
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-laptop-code text-violet-600"></i> Outils Actuels & CRM
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-violet-50 text-violet-800 border border-violet-200 px-3 py-1 rounded-full text-xs font-semibold"><i class="fab fa-salesforce mr-1 text-blue-500"></i>Salesforce (Certified Admin)</span>
+                            <span class="bg-sky-50 text-sky-800 border border-sky-200 px-3 py-1 rounded-full text-xs font-semibold"><i class="fab fa-hubspot mr-1 text-orange-500"></i>HubSpot CRM (Sales & Service)</span>
+                            <span class="bg-indigo-50 text-indigo-800 border border-indigo-200 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-comments mr-1 text-indigo-500"></i>Intercom & Zendesk</span>
+                            <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-full text-xs font-semibold"><i class="fas fa-chart-bar mr-1 text-amber-500"></i>PowerBI & Excel Avancé</span>
+                            <span class="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full text-xs"><i class="fas fa-tasks mr-1"></i>Jira & Notion</span>
+                            <span class="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full text-xs"><i class="fas fa-project-diagram mr-1"></i>Miro & Figma</span>
+                            <span class="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full text-xs"><i class="fab fa-slack mr-1"></i>Slack & Pack Office</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARTE 2 : Stack & Compétences Oreegami (Spécialisation IA & No-Code) -->
+                <div class="bg-gradient-to-br from-violet-50/60 via-white to-cyan-50/60 border border-cyan-300 rounded-3xl p-6 sm:p-8 shadow-xl relative hover:border-cyan-400 transition-colors">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-200/80 pb-4">
+                        <div>
+                            <span class="bg-gradient-to-r from-violet-600 to-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                                <i class="fas fa-rocket mr-1"></i> Spécialisation Oreegami (2026)
+                            </span>
+                            <h3 class="text-xl font-extrabold text-slate-900 mt-2">Compétences & Stack IA / No-Code</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg shadow-sm">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sub Block 1: Compétences Oreegami -->
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold text-cyan-800 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-graduation-cap text-cyan-600"></i> Compétences IA & No-Code en acquisition
+                        </h4>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-600 mt-1"></i> <span><strong>Cadrage Design Thinking & MVP</strong> (Matrice MoSCoW, Value Proposition)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-600 mt-1"></i> <span><strong>Architecture de Données Relationnelles</strong> (Modélisation Back-End)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-600 mt-1"></i> <span><strong>Workflows & Automatisations Complexe</strong> (APIs, Webhooks, Gestion d'erreurs)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-600 mt-1"></i> <span><strong>Déploiement d'Agents IA & RAG</strong> (Retrieval-Augmented Generation, MCPs)</span></li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check-circle text-cyan-600 mt-1"></i> <span><strong>Prototypage Vibe Coding & Interfaces Web</strong> (Front-End dynamique)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sub Block 2: Stack Outils Oreegami -->
+                    <div>
+                        <h4 class="text-xs font-bold text-cyan-800 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                            <i class="fas fa-microchip text-cyan-600"></i> Stack No-Code, Automation & IA
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-bolt mr-1 text-cyan-300"></i>Make.com</span>
+                            <span class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-diagram-project mr-1 text-cyan-300"></i>n8n</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-table mr-1"></i>Airtable</span>
+                            <span class="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-database mr-1"></i>Supabase (PostgreSQL/Vector)</span>
+                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-code mr-1"></i>Lovable & WeWeb</span>
+                            <span class="bg-violet-700 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-robot mr-1 text-cyan-300"></i>Salesforce Agentforce</span>
+                            <span class="bg-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-brain mr-1"></i>ChatGPT / Claude / Gemini / Mistral</span>
+                            <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm"><i class="fas fa-network-wired mr-1"></i>APIs, MCPs & Webhooks</span>
+                            <span class="bg-slate-800 text-white px-3 py-1 rounded-full text-xs"><i class="fas fa-wpforms mr-1"></i>Tally & Typeform</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 fade-in text-center">
+            <div class="card-care p-8 sm:p-12 rounded-3xl max-w-4xl mx-auto bg-gradient-to-br from-white via-slate-50 to-violet-50/50">
+                <span class="text-xs font-bold uppercase tracking-wider text-violet-600 mb-2 block">Travaillons ensemble</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+                    Prêt(e) à transformer vos opérations avec l'<span class="text-gradient">IA & le No-Code</span> ?
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mb-8 font-medium">
+                    Je suis disponible pour une alternance de Cheffe de Projet Digital IA / No-Code. Discutons de vos enjeux opérationnels et de la manière dont je peux renforcer vos équipes.
+                </p>
+
+                <!-- All Download & Contact Links -->
+                <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+                    <a href="https://www.linkedin.com/in/corinne-csm/" target="_blank" rel="noopener noreferrer" class="btn-primary px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-linkedin text-sm"></i> LinkedIn
+                    </a>
+                    <a href="https://my.assessfirst.com/public/profile/c9mrmxcj-corinne-marsiac?lang=fr-FR" target="_blank" rel="noopener noreferrer" class="btn-secondary px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fas fa-user-check text-cyan-600"></i> AssessFirst
+                    </a>
+                    <a href="https://drive.google.com/file/d/10fae9xSc_uFLvVPaFoWxeF_X1qFVyx1g/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fas fa-file-pdf text-red-500"></i> Télécharger CV
+                    </a>
+                    <a href="https://drive.google.com/file/d/10fae9xSc_uFLvVPaFoWxeF_X1qFVyx1g/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-violet-600"></i> Plaquette Formation
+                    </a>
+                    <a href="https://drive.google.com/file/d/10fae9xSc_uFLvVPaFoWxeF_X1qFVyx1g/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fas fa-folder-open text-blue-600"></i> Dossier Candidature
+                    </a>
+                    <a href="https://calendly.com/corinne-marsiac-csm/30min" target="_blank" rel="noopener noreferrer" class="bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition shadow-md shadow-cyan-500/20">
+                        <i class="fas fa-calendar-check"></i> Calendly
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs font-semibold text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span>© 2026 Corinne MARSIAC • Cheffe de Projet IA Générative & No-Code</span>
+            <div class="flex items-center gap-4 text-slate-600">
+                <a href="https://www.linkedin.com/in/corinne-csm/" target="_blank" class="hover:text-violet-600"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="#accueil" class="hover:text-violet-600"><i class="fas fa-arrow-up text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Cycle Care & CS x IA -->
+    <div id="cycle-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex justify-center items-center p-4 hidden">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 relative border border-slate-200">
+            <button id="close-cycle-modal-button" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-600">Méthodologie Projets IA & No-Code</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+                    Du besoin au produit adopté
+                </h3>
+                <p class="text-slate-500 text-xs sm:text-sm font-medium mt-1">Une démarche orientée utilisateurs, valeur métier et déploiement réel.</p>
+            </div>
+
+            <div class="space-y-3.5 text-xs sm:text-sm text-slate-700">
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">1</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">1. Explorer</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Entretiens utilisateurs, observations terrain, collecte et analyse des verbatims pour décrypter le besoin réel.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-violet-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">2</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">2. Cadrer</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Définition du problème, clarification des objectifs métier, évaluation des risques et fixation des KPIs de performance.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">3</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">3. Concevoir</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Cartographie des parcours utilisateurs, création des maquettes fonctionnelles, constitution et priorisation du backlog (MVP).</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">4</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">4. Construire</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Modélisation de la base de données (Airtable/Supabase), conception des flux automatisés (Make/n8n), intégration d’agents IA et développement d’interfaces.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-cyan-500 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">5</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">5. Tester</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Test des cas limites, validation des critères d’acceptation (UAT) et intégration des premiers retours utilisateurs.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0 mt-0.5">6</div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-0.5">6. Déployer</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Rédaction de la documentation, formation et accompagnement au changement, suivi de la mesure et itérations régulières.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-cyan-50/80 rounded-2xl border border-cyan-200 text-xs font-medium text-slate-800">
+                    <h5 class="font-extrabold text-cyan-900 mb-1">Livrables associés :</h5>
+                    <p class="leading-relaxed">Note de cadrage • personas • cartographie • backlog • roadmap • modèle de données • workflow • prototype • plan de tests • documentation • tableau de bord</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+
+        // Details Accordions
+        const detailsTriggers = document.querySelectorAll('.details-trigger');
+        detailsTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const content = trigger.nextElementSibling;
+                if (content && content.classList.contains('details-content')) {
+                    trigger.classList.toggle('open');
+                    content.classList.toggle('open');
+                }
+            });
+        });
+
+        // Modal Cycle Care
+        const openCycleModalButton = document.getElementById('open-cycle-modal-button');
+        const closeCycleModalButton = document.getElementById('close-cycle-modal-button');
+        const cycleModal = document.getElementById('cycle-modal');
+
+        if (openCycleModalButton && closeCycleModalButton && cycleModal) {
+            openCycleModalButton.addEventListener('click', () => {
+                cycleModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+            const closeModal = () => {
+                cycleModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            };
+            closeCycleModalButton.addEventListener('click', closeModal);
+            cycleModal.addEventListener('click', (e) => (e.target === cycleModal) && closeModal());
+        }
+
+        // Fade In Animation on Scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -40px 0px" };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+</body>
+</html>
